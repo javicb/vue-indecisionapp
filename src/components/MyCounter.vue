@@ -4,8 +4,8 @@
     <h3>Square: {{ squareCounter }}</h3>
 
     <div>
-      <button @click="increment">+1</button>
-      <button @click="decrement">-1</button>
+      <button @click="counter++">+1</button>
+      <button @click="counter--">-1</button>
     </div>
   </section>
 </template>
@@ -13,14 +13,23 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 
-const counter = ref(2)
+// esto es una forma de definir las props
+// const props = defineProps({
+//   initialCounter: {
+//     type: number,
+//     default: 0,
+//     required: true,
+//   },
+// })
+
+// pero en el setup, podemos acceder a las props directamente
+// sin necesidad de usar defineProps
+interface Props {
+  initialCounter: number
+}
+
+const props = defineProps<Props>()
+
+const counter = ref(props.initialCounter ?? 0)
 const squareCounter = computed(() => counter.value * counter.value)
-
-const increment = () => {
-  counter.value++
-}
-
-const decrement = () => {
-  counter.value--
-}
 </script>
