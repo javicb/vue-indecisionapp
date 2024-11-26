@@ -1,4 +1,5 @@
-import { defineComponent, ref, computed } from 'vue'
+import { useCounter } from '@/composables/useCounter'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'MyCounterScript',
@@ -9,8 +10,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const counter = ref(props.initialCounter)
-    const squareCounter = computed(() => counter.value * counter.value)
+    const { counter, squareCounter } = useCounter(props.initialCounter)
 
     return { counter, squareCounter }
   },
