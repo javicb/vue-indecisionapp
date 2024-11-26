@@ -13,17 +13,6 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 
-// esto es una forma de definir las props
-// const props = defineProps({
-//   initialCounter: {
-//     type: number,
-//     default: 0,
-//     required: true,
-//   },
-// })
-
-// pero en el setup, podemos acceder a las props directamente
-// sin necesidad de usar defineProps
 interface Props {
   initialCounter: number
 }
