@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html,
+body {
+  margin: 5;
+  padding: 10;
+  font-family: Arial, sans-serif;
+  background-color: grey;
+}
+
+button {
+  padding: 7px;
+} */
