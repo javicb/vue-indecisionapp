@@ -2,19 +2,16 @@
   <div class="flex-1 overflow-y-auto p-4">
     <div class="flex flex-col space-y-2">
       <!-- Messages go here -->
-      <!-- Example Message -->
-      <div class="flex justify-end">
-        <div class="bg-blue-200 text-black p-2 rounded-lg max-w-xs">
-          Hey, how's your day going?
-        </div>
-      </div>
-
-      <!-- Example Received Message -->
-      <div class="flex">
-        <div class="bg-gray-300 text-black p-2 rounded-lg max-w-xs">
-          Not too bad, just a bit busy. How about you?
-        </div>
-      </div>
+      <ChatBubble :itsMine="true" message="Mensaje de chat 1" />
+      <ChatBubble
+        :itsMine="false"
+        message="Si"
+        image="https://yesno.wtf/assets/yes/10-271c872c91cd72c1e38e72d2f8eda676.gif"
+      />
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+import ChatBubble from './ChatBubble.vue'
+</script>
