@@ -28,7 +28,7 @@ export const useChat = () => {
 
     messages.value.push({
       id: messages.value.length + 1,
-      message: answer,
+      message: answer.charAt(0).toUpperCase() + answer.slice(1),
       image,
       itsMine: false,
     })
