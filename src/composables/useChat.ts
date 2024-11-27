@@ -1,3 +1,4 @@
+import { sleep } from '@/helpers/sleep'
 import type { ChatMessage } from '@/interfaces/chat-message-interface'
 import type { YesNoResponse } from '@/interfaces/yes-no-response'
 import { ref } from 'vue'
@@ -20,6 +21,8 @@ export const useChat = () => {
     })
 
     if (!message.endsWith('?')) return
+
+    await sleep(1)
 
     const { answer, image } = await getResponse()
 
