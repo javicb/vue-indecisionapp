@@ -2,7 +2,7 @@
   <div class="bg-white p-4 flex items-center">
     <input
       type="text"
-      placeholder="Type your message..."
+      placeholder="Escribe una pregunta finalizando con '?'..."
       class="flex-1 border rounded-full px-4 py-2 focus:outline-none"
       v-model="message"
       @keypress.enter="sendMessage"
