@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ChatBubble.vue > shoud match snapshot 1`] = `
+"<!-- Example Message -->
+<!-- Example Received Message -->
+<div class="flex">
+  <div class="bg-gray-300 text-black p-2 rounded-lg max-w-xs"><span></span>
+    <!--v-if-->
+  </div>
+</div>"
+`;

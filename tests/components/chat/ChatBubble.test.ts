@@ -2,6 +2,11 @@ import { mount } from '@vue/test-utils'
 import ChatBubble from '@/components/chat/ChatBubble.vue'
 
 describe('ChatBubble.vue', () => {
+  it('shoud match snapshot', () => {
+    const wrapper = mount(ChatBubble)
+    expect(wrapper.html()).toMatchSnapshot()
+  })
+
   it('renders the message as mine', () => {
     const message = 'Hello, this is my message'
     const itsMine = true
