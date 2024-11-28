@@ -1,8 +1,9 @@
 import { mount, VueWrapper } from '@vue/test-utils'
 import MyCounter from '@/components/MyCounter.vue'
+import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 
 describe('MyCounter.vue', () => {
-  let wrapper: VueWrapper<any>
+  let wrapper: VueWrapper<unknown>
 
   beforeEach(() => {
     const value = 4
