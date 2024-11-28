@@ -1,5 +1,4 @@
 import { useCounter } from '@/composables/useCounter'
-import { describe, expect, it } from 'vitest'
 
 describe('useCounter', () => {
   it('should initialize counter with default value', () => {
