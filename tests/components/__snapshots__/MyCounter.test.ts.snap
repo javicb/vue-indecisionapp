@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyCounter.vue > shoud match snapshot 1`] = `
+"<section data-v-0352012b="">
+  <h3 data-v-0352012b="">Counter: 4</h3>
+  <h3 data-v-0352012b="">Square: 16</h3>
+  <div data-v-0352012b=""><button data-v-0352012b="" id="btn_increment" class="btn">+1</button><button data-v-0352012b="" id="btn_decrement" class="btn">-1</button></div>
+</section>"
+`;
