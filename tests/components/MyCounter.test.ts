@@ -1,5 +1,6 @@
 import { mount, VueWrapper } from '@vue/test-utils'
 import MyCounter from '@/components/MyCounter.vue'
+import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 
 describe('MyCounter.vue', () => {
   let wrapper: VueWrapper<unknown>
