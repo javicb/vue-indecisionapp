@@ -22,6 +22,7 @@
 
 <script lang="ts" setup>
 interface Props {
+  id: number
   message: string
   itsMine: boolean
   image?: string
