@@ -3,6 +3,7 @@ import ChatMessages from '@/components/chat/ChatMessages.vue'
 import ChatBubble from '@/components/chat/ChatBubble.vue'
 import { nextTick } from 'vue'
 import type { ChatMessage } from '@/interfaces/chat-message-interface'
+import { describe, expect, it } from 'vitest'
 
 describe('ChatMessages.vue', () => {
   const messages: ChatMessage[] = [

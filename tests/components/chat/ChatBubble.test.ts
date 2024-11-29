@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils'
 import ChatBubble from '@/components/chat/ChatBubble.vue'
+import { describe, expect, it } from 'vitest'
 
 describe('ChatBubble.vue', () => {
   it('shoud match snapshot', () => {
@@ -12,8 +13,10 @@ describe('ChatBubble.vue', () => {
     const itsMine = true
     const wrapper = mount(ChatBubble, {
       props: {
+        id: 1,
         message,
         itsMine,
+        image: '',
       },
     })
     expect(wrapper.text()).toContain(message)
@@ -23,12 +26,16 @@ describe('ChatBubble.vue', () => {
   })
 
   it('renders the message as received', () => {
+    const id = 1
     const message = 'No'
     const itsMine = false
+    const image = ''
     const wrapper = mount(ChatBubble, {
       props: {
+        id,
         message,
         itsMine,
+        image,
       },
     })
     expect(wrapper.text()).toContain(message)
@@ -37,11 +44,13 @@ describe('ChatBubble.vue', () => {
   })
 
   it('renders the image when provided', () => {
+    const id = 1
     const message = 'No'
     const itsMine = false
     const image = 'https://example.com/image.jpg'
     const wrapper = mount(ChatBubble, {
       props: {
+        id,
         message,
         itsMine,
         image,
@@ -53,12 +62,16 @@ describe('ChatBubble.vue', () => {
   })
 
   it('does not render the image when not provided', () => {
+    const id = 1
     const message = 'No'
     const itsMine = false
+    const image = ''
     const wrapper = mount(ChatBubble, {
       props: {
+        id,
         message,
         itsMine,
+        image,
       },
     })
     expect(wrapper.find('img').exists()).toBe(false)

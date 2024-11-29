@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils'
 import MessageBox from '@/components/chat/MessageBox.vue'
+import { describe, expect, it } from 'vitest'
 
 describe('MessageBox.vue', () => {
   it('shoud match snapshot', () => {

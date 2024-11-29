@@ -3,6 +3,7 @@ import IndecisionView from '@/views/IndecisionView.vue'
 import ChatMessages from '@/components/chat/ChatMessages.vue'
 import MessageBox from '@/components/chat/MessageBox.vue'
 import { nextTick, ref } from 'vue'
+import { describe, expect, it, vi } from 'vitest'
 
 // Mock the useChat composable manualmente
 const messages = ref([

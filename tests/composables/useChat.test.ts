@@ -1,6 +1,7 @@
 import { useChat } from '@/composables/useChat'
 import { sleep } from '@/helpers/sleep'
 import type { YesNoResponse } from '@/interfaces/yes-no-response'
+import { describe, expect, it, vi } from 'vitest'
 
 vi.mock('@/helpers/sleep', () => ({
   sleep: vi.fn(),
